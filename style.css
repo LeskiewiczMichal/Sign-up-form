@@ -367,11 +367,13 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
+  /* Left side of page */
+
   #left-side {
     display: flex;
     background-image: url('./images/background.jpg');
     background-size: cover;
-    flex: 3;
+    flex: 15;
     flex-wrap: wrap;      
     justify-content: center;
   }
@@ -414,21 +416,10 @@
   }
 
 
-/* 
-  fieldset {
-      position: relative;
-      height: 25vw;
-      margin-left: none;
-  } */
-
-  /* legend {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-  } */
+  /* Form styling */
 
   form {
-      height: 60vh;
+      min-height: fit-content;
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
@@ -475,9 +466,11 @@
 
   }
 
-  input[type='password']:user-invalid {
+  input[type='password']:invalid {
       border-color: rgb(255, 0, 0);
   }
+
+  
 
   label[for='tel']:after {
       content: ' (optional)';
@@ -489,23 +482,51 @@
       font-size: 0.7rem;
   }
 
+  /* Top on right */
+
   #top {
       height: 20vh;
   }
 
+  #top > p {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+
+
+  /* Bottom on rigth */
+
   #bottom {
       flex: 1;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-      border: 1px solid black;;
       height: 20vh;
   }
 
   button {
     padding: 1rem;
+    margin: 2rem;
+    border: none;
+    box-shadow: 3px 3px 5px;
+    border-radius: 10%;
+    background-color: rgb(192, 226, 235);
   }
 
+   button:hover {
+   cursor: pointer;
+   background-color: rgb(94, 196, 224);
+   }
 
+   p {
+    margin-left: 1rem;
+   }
+
+   p > a {
+    text-decoration: none;
+    color: rgb(0, 200, 255);
+    font-weight: 700;
+   }
+   
 
