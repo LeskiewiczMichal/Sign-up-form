@@ -408,9 +408,8 @@
     background-color: rgba(172, 169, 169, 0.178);
   }
 
-  #right-side > div {
+  #right-side div  {
       flex: 1 1 100%;
-
       align-self: center;
   }
 
@@ -429,7 +428,7 @@
   } */
 
   form {
-      height: min-content;
+      height: 60vh;
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
@@ -445,11 +444,14 @@
 
   #form-inputs {
       display: flex;
+      flex: 1;
       flex-direction: column;
       flex-wrap: wrap;
       height: 20em;
       row-gap: 3rem;
-  }
+      justify-content: flex-start;
+      width: 100%;
+    }
 
   #form-inputs > p {
       display: flex;
@@ -467,10 +469,14 @@
       border: 1px solid rgb(187, 177, 177);
   }
 
-  #bottom {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+  input:focus {
+      border: 3px solid rgb(78, 42, 207);
+      box-shadow: 3px 3px 5px rgb(78, 42, 207);
+
+  }
+
+  input[type='password']:user-invalid {
+      border-color: rgb(255, 0, 0);
   }
 
   label[for='tel']:after {
@@ -479,6 +485,27 @@
   }
 
   label[for='lname']:after {
-    content: ' (optional)';
-    font-size: 0.7rem;
-}
+      content: ' (optional)';
+      font-size: 0.7rem;
+  }
+
+  #top {
+      height: 20vh;
+  }
+
+  #bottom {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border: 1px solid black;;
+      height: 20vh;
+  }
+
+  button {
+    padding: 1rem;
+  }
+
+
+

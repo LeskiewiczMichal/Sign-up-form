@@ -11,11 +11,11 @@
         <p>Background photo by <a href="https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annie Spratt</a> on <a href="https://unsplash.com/s/photos/background-image?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
     </div>
     <div id="right-side">
-        <div>
+        <div id="top">
 
         </div>
-        <div>
-            <form action="" method="post" autocomplete="on" id="signup-form">
+        <div id="formdiv">
+            <form action="/my-handling-form-page" method="post" autocomplete="on" id="signup-form">
                 <legend>Please Sign-up</legend>
                 <div id="form-inputs">
                     <p>
@@ -39,14 +39,14 @@
                         <input type="tel" id="tel" name="tel">
                     </p>
                     <p>
-                        <label for="pswd">Confirm Password</label>
-                        <input type="password" id="pswd" name="psw" required>
+                        <label for="conf-pswd">Confirm Password</label>
+                        <input type="password" id="conf-pswd" name="conf-pswd" required autocomplete="off">
                     </p>
                 </div>
             </form>
         </div>
         <div id="bottom">
-        <button form="signup-form">Create Account</button>
+        <button type="submit" form="signup-form">Create Account</button>
         </div>
     </div>
 
