@@ -403,18 +403,17 @@
 
 #right-side {
     display: flex;
+    flex-wrap: wrap;
     flex-grow: 5;
     background-color: rgba(172, 169, 169, 0.178);
   }
 
   #right-side > div {
-      flex: 1;
+      flex: 1 1 100%;
+
       align-self: center;
   }
 
-  form {
-      height: 3;
-  }
 
 /* 
   fieldset {
@@ -430,7 +429,7 @@
   } */
 
   form {
-      height: 30vw;
+      height: min-content;
       padding: 1.5rem;
       display: flex;
       flex-direction: column;
@@ -440,18 +439,46 @@
 
   legend {
       font-size: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+  }
+
+  #form-inputs {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 20em;
+      row-gap: 3rem;
   }
 
   #form-inputs > p {
       display: flex;
       flex-direction: column;
       gap: 0.1rem;
-      color: rgb(104, 95, 95);
+      color: rgb(83, 77, 77);
   }
 
-  input[type='text'] {
+  input[type='text'],
+  input[type='email'],
+  input[type='password'],
+  input[type='tel'] {
       width: 15rem;
       height: 2rem;
       border: 1px solid rgb(187, 177, 177);
   }
+
+  #bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  label[for='tel']:after {
+      content: ' (optional)';
+      font-size: 0.7rem;
+  }
+
+  label[for='lname']:after {
+    content: ' (optional)';
+    font-size: 0.7rem;
+}
